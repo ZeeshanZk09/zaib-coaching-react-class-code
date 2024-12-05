@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import './Header.css';
 
 // xs sm md lg xl 2xl 3xl 4xl 5xl 6xl 7xl 8xl 9xl
 const Header = () => {
@@ -23,8 +24,8 @@ const Header = () => {
       id: 2,
     },
     {
-      label: "Contact",
-      path: "/contact",
+      label: "Product",
+      path: "/product",
       id: 3,
     },
   ];
@@ -32,17 +33,19 @@ const Header = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <header className="flex bg-[#f9f9f9]   h-24 w-screen justify-between items-center p-4 shadow-lg shadow-black">
+    <header className="flex bg-white   h-24 w-screen justify-between items-center p-4 shadow-lg shadow-black">
       <div className="">
+        <Link href={`/`}>
         <Image
           className="  w-10 h-10 md:w-14 md:h-14 "
           src="/Zebotix.png"
           alt="logo"
           width={500}
           height={500}
-        />
+          />
+          </Link>
       </div>
-      <div className="flex bg-gray-200 px-2 md:px-4 py-1 md:py-2 rounded-full overflow-hidden w-1/3  md:w-1/2 outline-none gap-2">
+      <div className="hidden md:flex bg-gray-200 px-2 md:px-4 py-1 md:py-2 rounded-full overflow-hidden w-1/3  md:w-1/2 outline-none md:gap-2">
         <input
           type="search"
           className="bg-gray-200 px-2 md:px-4 text-sm font-thin md:text-xl outline-none w-full"
@@ -67,20 +70,16 @@ const Header = () => {
         </button>
       </div>
       <div></div>
-      <div className=" hidden ">
+      <div className=" flex gap-4 ">
         {navLinks.map(({ label, path, id }) => (
-          <Link key={id} href={path} className="">
+          <Link key={id} href={path} className="link-with-border font-medium text-sm md:text-lg">
             {label}
           </Link>
         ))}
       </div>
       <div className="login">
         <Link href={"/"}>
-          <button type="button">login</button>
-        </Link>
-        {` / `}
-        <Link href={`/`}>
-          <button type="button">Sign Up</button>
+          <button type="button" className="border-b-2 border-gray-500 px-2 py-1 rounded-md outline-none">login</button>
         </Link>
       </div>
     </header>

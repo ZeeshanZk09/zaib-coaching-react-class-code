@@ -1,0 +1,20 @@
+.link-with-border {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .link-with-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+  }
+  
+  .link-with-border:hover::after {
+    width: 100%;
+  }
