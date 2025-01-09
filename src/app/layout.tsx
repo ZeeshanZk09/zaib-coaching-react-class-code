@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
+// import Navbar from "@/components/NavBar";
+// import ThemeChanger from "@/components/ThemeChanger";
 
 export const metadata: Metadata = {
   title: "Food Website",
@@ -14,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-      <Header />
+      <body className={`antialiased`}>
+        {/* <Header /> */}
+        {/* <Navbar /> */}
 
+        <div id="popup-root"></div>
         {children}
       </body>
     </html>

@@ -53,7 +53,7 @@ const Header = () => {
   // const [search, setSearch] = useState("");
 
   return (
-    <header className="flex flex-col bg-white  h-24 md:w-screen justify-start items-center  overfollow-hidden">
+    <header className="absolute flex flex-col bg-white  h-24 md:w-screen justify-start items-center  overfollow-hidden">
       {/* Mobile view */}
       <nav className="md:hidden w-screen  p-2 overflow-hidden flex  justify-between">
         <div className="flex flex-row-reverse w-full items-center justify-between px-2">

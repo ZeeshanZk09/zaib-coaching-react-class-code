@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { Toggle } from "@/components/ui/toggle"
+import { Switch } from "@/components/ui/switch"
 
 interface TypeUserData {
   name: string;
@@ -86,6 +88,12 @@ const UserForm = () => {
         <p className="py-2">
           Password: <span>{useData.password}</span>{" "}
         </p>
+      </section>
+
+
+      <section className="w-screen h-screen">
+      <Toggle>Toggle</Toggle>
+      <Switch />
       </section>
     </form>
   );
